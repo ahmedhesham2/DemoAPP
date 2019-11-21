@@ -31,9 +31,9 @@ class OverViewCharts extends React.PureComponent {
         var second_stand_data_list = [0,0,0,0,0,0,0];
 
         if(this.props.Chart_Data.length != undefined){
-            arr = JSON.parse(this.props.Chart_Data[0])
-            data_arr = JSON.parse(arr["yAxis"][0]["data"]).slice(0, -1);
-            labels_list = arr["xAxis"].slice(Math.max(arr["xAxis"].length - 7, 1))
+            var arr = JSON.parse(this.props.Chart_Data[0])
+            var data_arr = JSON.parse(arr["yAxis"][0]["data"]).slice(0, -1);
+            var labels_list = arr["xAxis"].slice(Math.max(arr["xAxis"].length - 7, 1))
             chart_data_list = data_arr.slice(Math.max(data_arr.length - 7, 1))
             if(arr["yAxis"].length >= 2){
             stand_data_list = JSON.parse(arr["yAxis"][1]["data"]).slice(Math.max(JSON.parse(arr["yAxis"][1]["data"]).length - 7, 1))
@@ -42,7 +42,7 @@ class OverViewCharts extends React.PureComponent {
             second_stand_data_list = JSON.parse(arr["yAxis"][2]["data"]).slice(Math.max(JSON.parse(arr["yAxis"][2]["data"]).length - 7, 1))
             }
 
-            for (label in labels_list){
+            for (let label in labels_list){
                 labels = [...labels , "Day"+labels_list[label]]
             }
 

@@ -17,7 +17,7 @@ import { connect } from "react-redux";
 import { DataStore } from '../../Store/Store';
 import { Header } from "react-native-elements";
 import IconComponent from "../Icons/Icon";
-import { Ionicons } from "react-native-vector-icons";
+import Ionicons  from 'react-native-vector-icons/Ionicons';
 import styles from '../Dark.style';
 import { withNavigation } from "react-navigation";
 import MenuButton from '../Menu/MenuButton';

@@ -3,7 +3,7 @@ import { StyleSheet, View ,Button, PixelRatio , Platform , Dimensions , Text, La
 import {addFeedType, updateFeedType} from '../../Actions'
 import { Actions } from 'react-native-router-flux';
 import {connect} from 'react-redux';
-import { Ionicons } from 'react-native-vector-icons';
+import Ionicons  from 'react-native-vector-icons/Ionicons';
 var TEXT_SIZE = (PixelRatio.get() <= 2) ? 17 : 19;
 var NAVBAR_HEIGHT = (Platform.OS === 'ios') ? 64 : 54;
 var {width: windowWidth, height: windowHeight} = Dimensions.get('window');

@@ -3,7 +3,7 @@ import { Router, Scene, Stack } from 'react-native-router-flux';
 import ListFarms from './ListFarms';
 import AddFarm from './AddFarm';
 import EditFarm from './EditFarm';
-import { Ionicons } from 'react-native-vector-icons';
+import Ionicons  from 'react-native-vector-icons/Ionicons';
 import { toggle_Menu } from "../../../Actions";
 import { connect } from 'react-redux';
 

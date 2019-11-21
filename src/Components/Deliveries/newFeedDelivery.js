@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import RNPickerSelect from 'react-native-picker-select';
 import {bindActionCreators} from 'redux';
 import * as ReduxActions from '../../Actions';
-import { Ionicons } from 'react-native-vector-icons';
+import Ionicons  from 'react-native-vector-icons/Ionicons';
 
 var TEXT_SIZE = (PixelRatio.get() <= 2) ? 17 : 19;
 var NAVBAR_HEIGHT = (Platform.OS === 'ios') ? 64 : 54;

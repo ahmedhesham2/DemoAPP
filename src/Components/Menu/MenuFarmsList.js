@@ -10,7 +10,7 @@ import {
     FlatList ,
     SafeAreaView
 } from 'react-native';
-import { Ionicons } from 'react-native-vector-icons';
+import Ionicons  from 'react-native-vector-icons/Ionicons';
 import { toggle_Menu , select_menu_farm } from "../../Actions";
 import { withNavigation } from "react-navigation";
 import { connect } from "react-redux";

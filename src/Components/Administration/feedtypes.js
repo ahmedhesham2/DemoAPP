@@ -3,7 +3,7 @@ import { Text } from "react-native";
 import { Router, Scene, Stack, Actions } from 'react-native-router-flux';
 import ListFeedTypes from './ListFeed';
 import NewFeedType from './new_feedtype';
-import { Ionicons } from 'react-native-vector-icons';
+import Ionicons  from 'react-native-vector-icons/Ionicons';
 import { toggle_Menu } from "../../Actions";
 import { connect } from 'react-redux';
 

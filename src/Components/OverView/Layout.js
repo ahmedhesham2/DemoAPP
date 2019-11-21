@@ -3,7 +3,7 @@ import { StyleSheet, Text, View , TextInput , ScrollView } from 'react-native';
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
 import OverviewHeader from "./OverView_Header";
-// import OverViewSlider from "./OverView_Slider";
+import OverViewSlider from "./OverView_Slider";
 import LoadingOverLay from "../common/Loading_Overlay";
 import TopCards from './TopCards';
 import CardsNumbers from './CardsNumbers';
@@ -33,7 +33,16 @@ const Layout = React.memo(props => {
         <ScrollView>
         <TopCards LiveBirds={props.OverView_Data.LiveBirds}/>
 
-      
+        <OverViewSlider
+            Feed_Card={[ props.OverView_Data.total_feed_consumption , props.OverView_Data.feed_Per_Bird ]}
+            Loss_Card={[ props.OverView_Data.Loss , props.OverView_Data.CummLoss ]}
+            Weight_Card={[ props.OverView_Data.total_feed_consumption , props.OverView_Data.feed_Per_Bird ]}
+            Fcr_Card={[ props.OverView_Data.FCR , props.OverView_Data.FCROnSales ]}
+            Feed_Chart={props.OverView_Data.feed_per_Bird_chart} Weight_Chart={props.OverView_Data.weight_per_day_chart}
+            FCR_Chart={props.OverView_Data.fcr_chart} Loss_Chart={props.OverView_Data.total_loss_chart}
+            Weight_Chart={props.OverView_Data.weight_per_day_chart}
+            Loss_Chart={props.OverView_Data.total_loss_chart}
+        />
 
         <Calendar selected_date = {props.selected_Date}/>
         </ScrollView>

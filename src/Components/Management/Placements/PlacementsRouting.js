@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Router, Scene , Stack } from 'react-native-router-flux';
 import ListPlacements from './ListPlacements';
-import { Ionicons } from 'react-native-vector-icons';
+import Ionicons  from 'react-native-vector-icons/Ionicons';
 import { toggle_Menu } from "../../../Actions";
 import { connect } from 'react-redux';
 

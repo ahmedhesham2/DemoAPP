@@ -2,7 +2,7 @@ import React, { Component, PureComponent } from 'react';
 import { Router, Scene } from 'react-native-router-flux';
 import ListEnergyDeliveries from './ListEnergyDeliveries';
 import NewEnergyDelivery from './newEnergyDelivery';
-import { Ionicons } from 'react-native-vector-icons';
+import Ionicons  from 'react-native-vector-icons/Ionicons';
 import { toggle_Menu } from "../../Actions";
 import { connect } from 'react-redux';
 

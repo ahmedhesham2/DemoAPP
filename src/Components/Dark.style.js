@@ -5,7 +5,6 @@
 // Light Gray: #e6e9ed
 
 import {  Dimensions ,Platform } from 'react-native';
-import { Ionicons } from 'react-native-vector-icons';
 import { withTheme } from 'react-native-elements';
 
 var NAVBAR_HEIGHT = (Platform.OS === 'ios') ? 64 : 54;

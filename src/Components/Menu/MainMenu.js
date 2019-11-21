@@ -7,14 +7,14 @@ import {
     TouchableOpacity,
     TouchableHighlight,
     View,
-    FlatList ,
+    FlatList,
     SafeAreaView
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import Collapsible from 'react-native-collapsible';
-import Accordion from 'react-native-collapsible/Accordion';
-import Ionicons  from 'react-native-vector-icons/Ionicons'
-import { MaterialCommunityIcons } from 'react-native-vector-icons';
+import Accordion from 'accordion-collapse-react-native';
+import Ionicons  from 'react-native-vector-icons/Ionicons';
+import  MaterialCommunityIcons  from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon from 'react-native-vector-icons/AntDesign';
 import { withNavigation } from "react-navigation";
 import { toggle_Menu } from "../../Actions";
