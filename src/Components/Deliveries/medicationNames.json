@@ -1,0 +1,16 @@
+{
+  "medicationtypes": [
+    {
+      "id":1,
+      "medicationname": "Med 1"
+    },
+    {
+      "id":2,
+      "medicationname": "Med 2"
+    },
+    {
+      "id":3,
+      "medicationname": "Med 3"
+    }
+  ]
+}

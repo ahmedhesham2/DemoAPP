@@ -1,0 +1,7 @@
+{
+  "energytypes": [
+    {"id":1,"unit":"kg","energytype":"Diesel"},
+    {"id":2,"unit":"kg","energytype":"Gas"},
+    {"id":3,"unit":"kg","energytype":"Coal"}
+  ]
+}

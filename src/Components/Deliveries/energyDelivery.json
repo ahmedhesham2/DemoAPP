@@ -1,0 +1,49 @@
+
+{
+  "energyDeliveries": [
+    {
+      "id":1,
+      "the_date": "2019-11-05",
+      "fk_farm": 67,
+      "quantity":123,
+      "consumed":10,
+      "batch_num":"batch 122",
+      "cost":0,
+      "fk_energy_type":2,
+      "name": "Gas - batch 122",
+      "energyType": "Gas",
+      "synced":true
+    },
+     {
+      "id":2,
+      "the_date": "2019-11-05",
+      "fk_farm": 67,
+      "quantity":144,
+      "consumed":0,
+      "batch_num":"batch 89",
+      "cost":0,
+      "fk_energy_type":1,
+      "name": "Diesel - batch 89",
+      "energyType": "Diesel",
+      "synced":true
+    },
+    {
+      "id":3,
+      "the_date": "2019-11-05",
+      "fk_farm": 67,
+      "quantity":233,
+      "consumed":0,
+      "batch_num":"batch 700",
+      "cost":12,
+      "fk_energy_type":2,
+      "name": "Gas - batch 700",
+      "energyType": "Gas",
+      "synced":true
+    }
+  ]
+}
+
+
+
+
+

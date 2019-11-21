@@ -1,0 +1,16 @@
+{
+  "feedtypes": [
+    {
+      "id":1,
+      "feedtype": "Pre-Breeder"
+    },
+    {
+      "id":2,
+      "feedtype": "Grower"
+    },
+    {
+      "id":3,
+      "feedtype": "Super Starter"
+    }
+  ]
+}

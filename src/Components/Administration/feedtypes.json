@@ -1,0 +1,40 @@
+{
+  "feedtypes": [
+    {
+      "id":1,
+      "feedtype": "Breeder"
+    },
+    {
+      "id":2,
+      "feedtype": "Grower"
+    },
+    {
+      "id":3,
+      "feedtype": "Starter"
+    },
+    {
+      "id":4,
+      "feedtype": "Super Starter"
+    },
+    {
+      "id":5,
+      "feedtype": "Pre-Breeder"
+    },
+    {
+      "id":6,
+      "feedtype": "New Feed Type"
+    },
+    {
+      "id":7,
+      "feedtype": "Test Name"
+    },
+    {
+      "id":8,
+      "feedtype": "New Starter"
+    },
+    {
+      "id":9,
+      "feedtype": "New Super Starter"
+    },
+  ]
+}

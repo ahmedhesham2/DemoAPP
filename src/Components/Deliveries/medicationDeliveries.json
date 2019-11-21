@@ -1,0 +1,58 @@
+
+{
+  "medicationDeliveries": [
+    {
+      "id":1,
+      "the_date": "2019-11-05",
+      "fk_farm": 67,
+      "quantity":100,
+      "consumed":10,
+      "batch_num":"batch M22",
+      "cost":0,
+      "serial":233,
+      "fk_medication_info":1,
+      "name": "Med 1 - batch M22",
+      "medicationName": "Med 1",
+      "medicationForAge":12,
+      "withdrawal_period":1,
+      "synced":true
+    },
+     {
+      "id":2,
+      "the_date": "2019-11-05",
+      "fk_farm": 67,
+      "quantity":100,
+      "consumed":10,
+      "batch_num":"batch M322",
+      "cost":0,
+      "serial":233,
+      "fk_medication_info":3,
+      "name": "Med 3 - batch M322",
+      "medicationName": "Med 3",
+      "medicationForAge":12,
+      "withdrawal_period":1,
+      "synced":true
+    },
+    {
+      "id":3,
+      "the_date": "2019-11-05",
+      "fk_farm": 67,
+      "quantity":100,
+      "consumed":10,
+      "batch_num":"batch M500",
+      "cost":0,
+      "serial":233,
+      "fk_medication_info":1,
+      "name": "Med 1 - batch M500",
+      "medicationName": "Med 1",
+      "medicationForAge":13,
+      "withdrawal_period":2,
+      "synced":true
+    }
+  ]
+}
+
+
+
+
+
