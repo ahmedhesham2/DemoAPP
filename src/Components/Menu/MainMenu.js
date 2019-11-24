@@ -1,18 +1,15 @@
-import React from "react";
+import React , { PureComponent } from "react";
 import {
-    Animated,
-    Dimensions,
     StyleSheet,
     Text,
     TouchableOpacity,
-    TouchableHighlight,
     View,
     FlatList,
     SafeAreaView
 } from 'react-native';
+
 import * as Animatable from 'react-native-animatable';
-import Collapsible from 'react-native-collapsible';
-import Accordion from 'accordion-collapse-react-native';
+import Accordion from 'react-native-collapsible/Accordion';
 import Ionicons  from 'react-native-vector-icons/Ionicons';
 import  MaterialCommunityIcons  from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon from 'react-native-vector-icons/AntDesign';
@@ -32,7 +29,7 @@ const menu_content = [
 var navigation = "" ;
 
 
-class MainMenu extends React.PureComponent {
+class MainMenu extends PureComponent {
 
     state = {activeSections: []};
     constructor(props){
@@ -111,26 +108,29 @@ class MainMenu extends React.PureComponent {
                <SafeAreaView style={styles.container} >
 
                   <TouchableOpacity onPress={()=> this.props.toggle_Menu("Farms_listing")} style={styles.customDrawerTouch} >
-					<View style={styles.backButtonRow}>
-					<Icon name="checkcircle" size={20} color="#3bb73e"/>
-					<Text style={{ color: '#000000' }}>  {this.props.Selected_Farm.FarmName}   </Text>
-          <Ionicons name="ios-arrow-forward" size={20} style={styles.customDrawerIcon} color="#000000"/>
-					</View>
+                        <View style={styles.backButtonRow}>
+                        <Icon name="checkcircle" size={20} color="#3bb73e"/>
+                        <Text style={{ color: '#000000' }}>  {this.props.Selected_Farm.FarmName}   </Text>
+                            <Ionicons name="ios-arrow-forward" size={20} style={styles.customDrawerIcon} color="#000000"/>
+                        </View>
 				  </TouchableOpacity>
 
                   <TouchableOpacity onPress={()=> this.props.navigation.navigate('Home')} style={styles.customDrawerTouch} >
-                    <View style={styles.backButtonRow}>
-                    <Ionicons name="md-analytics" size={20} style={styles.customDrawerIcon} color="#000000"/>
-                    <Text style={{ color: '#000000' }}>  OverView  </Text>
-                    </View>
+                        <View style={styles.backButtonRow}>
+                        <Ionicons name="md-analytics" size={20} style={styles.customDrawerIcon} color="#000000"/>
+                        <Text style={{ color: '#000000' }}>  OverView  </Text>
+                        </View>
                   </TouchableOpacity>
+
                   <TouchableOpacity onPress={()=> this.props.navigation.navigate('DailyData')} style={styles.customDrawerTouch} >
-              <View style={styles.backButtonRow}>
-              <Ionicons name="md-calendar" size={25} style={styles.customDrawerIcon} color="#000000"/>
-              <Text style={{ color: '#000000' }}>  Daily Data  </Text>
-              </View>
-            </TouchableOpacity>
-				 <Accordion activeSections={activeSections} sections={menu_content} touchableComponent={TouchableOpacity} expandMultiple={true} renderHeader={this.renderHeader} renderContent={this.renderContent} duration={400} onChange={this.setSections} />
+                        <View style={styles.backButtonRow}>
+                        <Ionicons name="md-calendar" size={25} style={styles.customDrawerIcon} color="#000000"/>
+                        <Text style={{ color: '#000000' }}>  Daily Data  </Text>
+                        </View>
+                  </TouchableOpacity>
+
+                <Accordion activeSections={activeSections} sections={menu_content} touchableComponent={TouchableOpacity} expandMultiple={true} renderHeader={this.renderHeader} renderContent={this.renderContent} duration={400} onChange={this.setSections} />
+
 
                </SafeAreaView>
             );
@@ -152,8 +152,8 @@ const styles = StyleSheet.create({
 		paddingTop: 15,
 	},
 
-  customDrawerIcon: { paddingRight: 10,
-  // left : 0,
+  customDrawerIcon: {
+    paddingRight: 10,
   },
 	backButtonRow: {
 		flexDirection: 'row',
