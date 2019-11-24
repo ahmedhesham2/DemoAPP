@@ -17,12 +17,6 @@ class ListFarms extends PureComponent {
     _this = this ;
   }
 
-  componentWillMount(){
-    // Actions.reset();
-    // Actions.AddFarm();
-                    
-}
-
   showOptions(FarmOption) {
         FarmItem = FarmOption;
         this.ActionSheet.show();

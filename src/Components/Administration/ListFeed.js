@@ -24,10 +24,6 @@ class ListFeedTypes extends PureComponent {
     constructor(props) {
         super(props);   
     }
-    componentWillMount(){
-        // Actions.r    eset();
-                        
-    }
 
     componentDidMount() {
         this.props.getFeedTypes();

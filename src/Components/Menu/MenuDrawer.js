@@ -4,7 +4,7 @@ import styles from './Menu.style';
 import {NavigationActions , withNavigation} from 'react-navigation';
 import {ScrollView, Text, View , Switch, TouchableOpacity} from 'react-native';
 import  MaterialCommunityIcons  from 'react-native-vector-icons/MaterialCommunityIcons';
-//import MainMenu from "./MainMenu";
+import MainMenu from "./MainMenu";
 import MenuFarmsList from "./MenuFarmsList";
 import DrawerHeader from "./DrawerHeader";
 import { connect } from "react-redux";
@@ -24,7 +24,7 @@ class MenuDrawer extends PureComponent {
         <ScrollView>
 
           <View>
-          {this.props.Menu_Page === "Main_Menu" ? <MenuFarmsList/> : <MenuFarmsList/>}
+          {this.props.Menu_Page === "Main_Menu" ? <MainMenu/> : <MenuFarmsList/>}
           </View>
 
         </ScrollView>

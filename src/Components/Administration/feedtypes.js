@@ -8,16 +8,6 @@ import { toggle_Menu } from "../../Actions";
 import { connect } from 'react-redux';
 
 class Main extends PureComponent {
-    componentDidMount(){
-        console.log("mountttttttttttttttttttt");
-        
-
-    }
-    componentWillMount(){
-        // console.log("WILLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
-        // console.log(Actions.currentScene);
-        // Actions.jump("ListFeedTypes");
-    }
     render() {
         return (
             <Router name="router1" navigationBarStyle={{ color: 'white', backgroundColor: '#0d4d9a' }}>
