@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import React, {Component , PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import styles from './Menu.style';
 import {NavigationActions , withNavigation} from 'react-navigation';
-import {ScrollView, Text, View , Switch, TouchableOpacity} from 'react-native';
+import {ScrollView, View , TouchableOpacity} from 'react-native';
 import  MaterialCommunityIcons  from 'react-native-vector-icons/MaterialCommunityIcons';
 import MainMenu from "./MainMenu";
 import MenuFarmsList from "./MenuFarmsList";

@@ -39,8 +39,4 @@ const styles = StyleSheet.create({
 	}
 })
 
-const mapStateToProps = state => {
-    return {} ;
-}
-
-export default connect(mapStateToProps,{toggle_Menu})(MenuButton);
+export default connect(null,{toggle_Menu})(MenuButton);

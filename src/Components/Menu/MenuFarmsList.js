@@ -1,11 +1,8 @@
 import React from "react";
 import {
-    Animated,
-    Dimensions,
     StyleSheet,
     Text,
     TouchableOpacity,
-    TouchableHighlight,
     View,
     FlatList ,
     SafeAreaView
