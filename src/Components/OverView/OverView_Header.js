@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View , TextInput , TouchableOpacity } from 'react-native';
+import { Text } from 'react-native';
 import { withNavigation } from "react-navigation";
 import MenuButton from '../Menu/MenuButton';
 import { Header } from "react-native-elements";
@@ -23,8 +23,4 @@ class OverviewHeader extends React.PureComponent {
     }
 }
 
-const mapStateToProps = state => {
-    return {};
-}
-
-export default withNavigation(connect(mapStateToProps,{toggle_calendar})(OverviewHeader));
+export default withNavigation(connect(null,{toggle_calendar})(OverviewHeader));

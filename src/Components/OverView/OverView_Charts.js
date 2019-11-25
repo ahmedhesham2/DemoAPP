@@ -1,25 +1,6 @@
 import React from 'react';
-import {
-    Animated,
-    Dimensions,
-    Image,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    TouchableHighlight,
-    View,
-    FlatList ,
-    SafeAreaView
-} from 'react-native';
-
-import {
-  LineChart,
-  BarChart,
-  PieChart,
-  ProgressChart,
-  ContributionGraph,
-  StackedBarChart
-} from "react-native-chart-kit";
+import { Dimensions ,Text,View } from 'react-native';
+import { LineChart } from "react-native-chart-kit";
 import styles from '../Dark.style';
 
 class OverViewCharts extends React.PureComponent {

@@ -1,12 +1,9 @@
-import React , { useState , useEffect } from 'react';
-import { StyleSheet, Text, View , TextInput , ScrollView } from 'react-native';
-import ActionButton from 'react-native-action-button';
-import Icon from 'react-native-vector-icons/Ionicons';
+import React , { useEffect } from 'react';
+import { View , ScrollView } from 'react-native';
 import OverviewHeader from "./OverView_Header";
 import OverViewSlider from "./OverView_Slider";
 import LoadingOverLay from "../common/Loading_Overlay";
 import TopCards from './TopCards';
-import CardsNumbers from './CardsNumbers';
 import Calendar from "../common/Calendar";
 import { get_overview_data , set_spinner } from "../../Actions";
 import { connect } from "react-redux";

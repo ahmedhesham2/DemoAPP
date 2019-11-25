@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { StyleSheet, View, Text, SafeAreaView } from 'react-native';
+import { StyleSheet, View, Text, ScrollView , SafeAreaView } from 'react-native';
 import { Button , Input } from 'react-native-elements';
 import RNPickerSelect from 'react-native-picker-select';
 import Ionicons  from 'react-native-vector-icons/Ionicons';
@@ -37,7 +37,7 @@ class EditFarm extends PureComponent {
     }
 
     return (
-      <SafeAreaView style={styles.container}>
+      <ScrollView style={styles.container}>
       < Formik initialValues = {{"FarmName" : this.props.selected_Farm.name , "Governorate" : this.props.selected_Farm.location , "HousesNumber" : this.props.selected_Farm.Num_of_Houses }} validationSchema = { validationSchema } onSubmit={this.handle_update_farm_form_submit} >
         {
 
@@ -113,7 +113,7 @@ class EditFarm extends PureComponent {
         )}
         </Formik>
 
-      </SafeAreaView>
+      </ScrollView>
     );
   }
 }

@@ -31,9 +31,10 @@ class LoginForm extends React.PureComponent {
  _registerForm(){
     this.props.navigation.navigate('register');
  }
+
 _resetPasswordForm(){
-  this.props.navigation.navigate('resetpassword');
-}
+    this.props.navigation.navigate('resetpassword');
+  }
 
 // _renderButton = () => {
 //     if(this.props.loading)

@@ -11,7 +11,7 @@ export default function App() {
   return (
     <Provider store = {DataStore}>
       <PersistGate loading={null} persistor={persistor} >
-        <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
+        <KeyboardAvoidingView style={styles.container} keyboardVerticalOffset={-400} behavior="padding" enabled>
           <SwitchNavigator />
         </KeyboardAvoidingView>
       </PersistGate>

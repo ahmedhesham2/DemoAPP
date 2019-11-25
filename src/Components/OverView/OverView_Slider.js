@@ -1,13 +1,9 @@
-import React from 'react'
-import {
-  Text,
-  View,
-  Dimensions
-} from 'react-native';
+import React from 'react';
+import { View } from 'react-native';
 import OverViewCharts from "./OverView_Charts";
 import Swiper from 'react-native-swiper';
 import CardsNumbers from "./CardsNumbers";
-import { Col, Row, Grid } from "react-native-easy-grid";
+import { Row, Grid } from "react-native-easy-grid";
 import styles from '../Dark.style';
 
 

@@ -1,9 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View , TextInput , TouchableOpacity } from 'react-native';
-import { FlatGrid } from 'react-native-super-grid';
-import IconComponent from "../Icons/Icon";
+import { Text } from 'react-native';
 import { Col, Row, Grid } from "react-native-easy-grid";
-import { withTheme, Divider } from 'react-native-elements';
+import { Divider } from 'react-native-elements';
 import styles from '../Dark.style';
 
 const monthNames = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "June", "July", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
