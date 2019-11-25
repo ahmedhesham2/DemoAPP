@@ -6,10 +6,9 @@ import energyDeliveriesData from '../Components/Deliveries/energyDelivery.json';
 import energyTypes from '../Components/Deliveries/energyTypes.json';
 import medicationNames from '../Components/Deliveries/medicationNames.json';
 import medDeliveriesData from '../Components/Deliveries/medicationDeliveries.json';
-
 import farmOverView from '../staticData/farmOverView.json';
-
 import loadDataView from '../staticData/load_data.json';
+
 export const toggle_Menu = MenuPage => {
     return { type : "toggle_Menu" , payload : MenuPage } ;
 }
@@ -28,11 +27,6 @@ export const change_selected_date = Date => {
 
 export const get_load_data = () => async dispatch => {
     const response = await load_data.get("/api/v0.1/LoadDataView/");
-    // console.log(response["data"]);
-    
-    // console.log(loadDataView);
-
-    // dispatch({ type : "get_load_data" , payload : loadDataView});
     dispatch({ type : "get_load_data" , payload : response["data"]});
 }
 
@@ -136,7 +130,6 @@ export const get_overview_data = (selected_Farm , selected_Date) => async dispat
     today = yyyy + '-' + mm + '-' + dd;
 
     const response = await load_data.get(`/api/v0.1/FarmOverView/?id=${selected_Farm.FarmID}&dateFilter=${today}&cycleFilter=all&breedFilter=all&flockFilter=all`);
-    // dispatch({ type : "get_overview_data" , payload : farmOverView  })
     dispatch({ type : "get_overview_data" , payload : response["data"] })
 }
 
