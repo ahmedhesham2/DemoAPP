@@ -1,9 +1,7 @@
 import React, { PureComponent } from 'react';
-import { StyleSheet, View, Text, ScrollView , SafeAreaView } from 'react-native';
+import { StyleSheet, View, Text, ScrollView } from 'react-native';
 import { Button , Input } from 'react-native-elements';
 import RNPickerSelect from 'react-native-picker-select';
-import Ionicons  from 'react-native-vector-icons/Ionicons';
-import  MaterialCommunityIcons  from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Formik } from "formik";
 import * as yup from "yup";
 import { Update_Management_Farm } from "../../../Actions";
@@ -11,6 +9,7 @@ import { Actions } from 'react-native-router-flux';
 import { connect } from "react-redux";
 
 var selected_ID;
+
 class EditFarm extends PureComponent {
 
   constructor(props) {
