@@ -20,7 +20,7 @@ import { connect } from "react-redux";
 
 const menu_content = [
     {header : "Farm Deliveries" , content : [{item_name : "Feed Deliveries" , item_route : "FeedDeliveries"},{item_name : "Energy Deliveries" , item_route : "EnergyDelivery"},{item_name : "Medication Deliveries" , item_route : "MedicationDelivery"}]},
-//    {header : "Daily Data", content : []},
+    {header : "Daily Data", content : []},
     {header : "Management", content : [{item_name : "Farms" , item_route : "FarmsManagement"},{item_name : "Houses" , item_route : "HousesManagement"},{item_name : "Placements" , item_route : "PlacementsManagement"},{item_name : "Users" , item_route : "UsersManagement"},{item_name : "Wizard" , item_route : "Wizard"},{item_name : "Standards" , item_route : ""},{item_name : "Farm Closure" , item_route : "FarmClosureManagement"}]},
     {header : "Administration", content : [{item_name : "Feed Type" , item_route : "FeedTypes"},{item_name : "Energy Type" , item_route : ""},{item_name : "Cull Type" , item_route : ""},{item_name : "Medication Name" , item_route : ""}]},
     {header : "Reports", content : [{item_name : "Daily Summary Report" , item_route : ""},{item_name : "Sales Report" , item_route : ""},{item_name : "Feed Consumption Report" , item_route : ""},{item_name : "Technical Farm Closure Report" , item_route : ""},{item_name : "Financial Farm Closure Report" , item_route : ""}]},
@@ -43,7 +43,7 @@ class MainMenu extends PureComponent {
           <Animatable.View duration={400} style={styles.customDrawerTouch} >
                 <View style={styles.backButtonRow}>
                 {section.header === "Farm Deliveries" && <MaterialCommunityIcons name="truck-delivery" size={25} color="#000000"/>}
-
+                {section.header === "Daily Data" && <Ionicons name="md-calendar" size={25} style={styles.customDrawerIcon} color="#000000"/>}
                 {section.header === "Management" && <MaterialCommunityIcons name="account-supervisor-circle" size={25} color="#000000"/>}
                 {section.header === "Administration" && <MaterialCommunityIcons name="settings-outline" size={25} color="#000000"/>}
                 {section.header === "Reports" && <MaterialCommunityIcons name="layers" size={25} color="#000000"/>}
@@ -58,19 +58,24 @@ class MainMenu extends PureComponent {
 
         //Accordion Content view
         if(section.header === "Daily Data"){
-
-//            const Current_Farm_Houses = DataStore.getState().All_Farms_Houses_Cycles.filter(Obj => Obj.FarmName === DataStore.getState().Selected_Farm.FarmName )
-//            section.content =  Current_Farm_Houses
-//
-//            return (
-//              <TouchableOpacity onPress={()=> this.props.navigation.navigate('DailyData')} style={styles.customDrawerTouch} >
-//              <View style={styles.backButtonRow}>
-//              <Ionicons name="md-calendar" size={25} style={styles.customDrawerIcon} color="#000000"/>
-//              <Text style={{ color: '#000000' }}>  Daily Data  </Text>
-//              </View>
-//            </TouchableOpacity>
-//
-//            );
+            section.content = DataStore.getState().Selected_Farm.Houses
+            return (
+                  <FlatList
+                            data={section.content}
+                            renderItem={({ item }) => {
+                              return (
+                                  <Animatable.View duration={400}>
+                                      <TouchableOpacity onPress={()=> console.log(item.HouseName)} style={styles.customDrawerTouch} >
+                                        <View style={styles.backButtonRow}>
+                                        <Text style={{ color: '#000000' }}>      {item.HouseName}  </Text>
+                                        </View>
+                                      </TouchableOpacity>
+                                  </Animatable.View>
+                                );
+                            }}
+                            keyExtractor={item => item.HouseID}
+                    />
+            );
         }
 
         else {
@@ -119,13 +124,6 @@ class MainMenu extends PureComponent {
                         <View style={styles.backButtonRow}>
                         <Ionicons name="md-analytics" size={20} style={styles.customDrawerIcon} color="#000000"/>
                         <Text style={{ color: '#000000' }}>  OverView  </Text>
-                        </View>
-                  </TouchableOpacity>
-
-                  <TouchableOpacity onPress={()=> this.props.navigation.navigate('DailyData')} style={styles.customDrawerTouch} >
-                        <View style={styles.backButtonRow}>
-                        <Ionicons name="md-calendar" size={25} style={styles.customDrawerIcon} color="#000000"/>
-                        <Text style={{ color: '#000000' }}>  Daily Data  </Text>
                         </View>
                   </TouchableOpacity>
 
