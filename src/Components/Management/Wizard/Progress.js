@@ -1,5 +1,5 @@
-import React , { PureComponent ,  Component } from 'react';
-import { View , Button , TextInput , StyleSheet , Text , ScrollView } from "react-native";
+import React , { PureComponent } from 'react';
+import { View } from "react-native";
 import { ProgressSteps, ProgressStep } from 'react-native-progress-steps';
 import WizardFirstPage from "./WizardFirstPage";
 import WizardSecondPage from "./WizardSecondPage";

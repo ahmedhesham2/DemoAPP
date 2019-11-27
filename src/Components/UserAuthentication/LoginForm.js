@@ -153,8 +153,4 @@ const styles = StyleSheet.create({
 
 });
 
-const mapStateToProps = state => {
-    return {} ;
-}
-
-export default connect(mapStateToProps,{get_load_data,Fetch_Governorate})(LoginForm);
+export default connect(null,{get_load_data,Fetch_Governorate})(LoginForm);

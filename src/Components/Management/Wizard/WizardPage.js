@@ -1,5 +1,5 @@
-import React , { PureComponent ,  Component } from 'react';
-import { View , Button , TextInput , StyleSheet , Text } from "react-native";
+import React , { PureComponent } from 'react';
+import { View } from "react-native";
 import Progress from "./Progress";
 import MenuButton from "../../Menu/MenuButton";
 

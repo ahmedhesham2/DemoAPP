@@ -1,7 +1,7 @@
 import React , { PureComponent } from 'react';
 import { Formik } from "formik";
 import * as yup from "yup";
-import { View , Button , TextInput , StyleSheet , Text , ScrollView } from "react-native";
+import { Button , TextInput , StyleSheet , Text , ScrollView } from "react-native";
 import { connect } from "react-redux";
 import { Third_Form_submitted , reset_wizard_Form } from "../../../Actions";
 import RNPickerSelect from 'react-native-picker-select';

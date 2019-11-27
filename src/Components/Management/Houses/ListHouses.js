@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { StyleSheet , FlatList , Text , View , TextInput , TouchableOpacity , ActivityIndicator , TouchableHighlight , TouchableWithoutFeedback } from 'react-native';
+import { StyleSheet , FlatList , Text , View , TouchableHighlight , TouchableWithoutFeedback } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import ActionSheet from 'react-native-actionsheet';
 import { connect } from "react-redux";

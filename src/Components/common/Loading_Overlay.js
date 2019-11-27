@@ -1,5 +1,5 @@
-import React, { Component , PureComponent } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import React, { PureComponent } from 'react';
+import { StyleSheet } from 'react-native';
 import Spinner from 'react-native-loading-spinner-overlay';
 import { connect } from "react-redux";
 

@@ -1,16 +1,6 @@
-import React, { Component , PureComponent } from 'react';
+import React, { PureComponent } from 'react';
 import { Text , StyleSheet , View } from "react-native"
-import {
-  BallIndicator,
-  BarIndicator,
-  DotIndicator,
-  MaterialIndicator,
-  PacmanIndicator,
-  PulseIndicator,
-  SkypeIndicator,
-  UIActivityIndicator,
-  WaveIndicator,
-} from 'react-native-indicators';
+import { SkypeIndicator } from 'react-native-indicators';
 
 class ActivityIndicator extends PureComponent {
   render() {
