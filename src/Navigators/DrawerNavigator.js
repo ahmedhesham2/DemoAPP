@@ -2,7 +2,6 @@ import React from 'react';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createAppContainer } from 'react-navigation';
 import MenuDrawer from "../Components/Menu/MenuDrawer";
-import MenuButton from "../Components/Menu/MenuButton";
 import Main from "../Components/Administration/feedtypes";
 import FarmsRouting from "../Components/Management/Farms/FarmsRouting";
 import HousesRouting from "../Components/Management/Houses/HousesRouting";

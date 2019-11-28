@@ -19,11 +19,11 @@ import { DataStore } from "../../Store/Store";
 import { connect } from "react-redux";
 
 const menu_content = [
-    {header : "Farm Deliveries" , content : [{item_name : "Feed Deliveries" , item_route : "FeedDeliveries"},{item_name : "Energy Deliveries" , item_route : "EnergyDelivery"},{item_name : "Medication Deliveries" , item_route : "MedicationDelivery"}]},
+    {header : "Farm Deliveries" , content : [{item_name : "Feed Deliveries" , item_route : "FeedDeliveries" , params : {ID : DataStore.getState().Selected_Farm.FarmID , Date : DataStore.getState().selected_date} },{item_name : "Energy Deliveries" , item_route : "EnergyDelivery" , params : {ID : DataStore.getState().Selected_Farm.FarmID , Date : DataStore.getState().selected_date} },{item_name : "Medication Deliveries" , item_route : "MedicationDelivery", params : {ID : DataStore.getState().Selected_Farm.FarmID , Date : DataStore.getState().selected_date} }]},
     {header : "Daily Data", content : []},
-    {header : "Management", content : [{item_name : "Farms" , item_route : "FarmsManagement"},{item_name : "Houses" , item_route : "HousesManagement"},{item_name : "Placements" , item_route : "PlacementsManagement"},{item_name : "Users" , item_route : "UsersManagement"},{item_name : "Wizard" , item_route : "Wizard"},{item_name : "Standards" , item_route : ""},{item_name : "Farm Closure" , item_route : "FarmClosureManagement"}]},
-    {header : "Administration", content : [{item_name : "Feed Type" , item_route : "FeedTypes"},{item_name : "Energy Type" , item_route : ""},{item_name : "Cull Type" , item_route : ""},{item_name : "Medication Name" , item_route : ""}]},
-    {header : "Reports", content : [{item_name : "Daily Summary Report" , item_route : ""},{item_name : "Sales Report" , item_route : ""},{item_name : "Feed Consumption Report" , item_route : ""},{item_name : "Technical Farm Closure Report" , item_route : ""},{item_name : "Financial Farm Closure Report" , item_route : ""}]},
+    {header : "Management", content : [{item_name : "Farms" , item_route : "FarmsManagement" , params : {} },{item_name : "Houses" , item_route : "HousesManagement" , params : {}},{item_name : "Placements" , item_route : "PlacementsManagement",params : {}},{item_name : "Users" , item_route : "UsersManagement",params : {}},{item_name : "Wizard" , item_route : "Wizard",params : {}},{item_name : "Standards" , item_route : "",params : {}},{item_name : "Farm Closure" , item_route : "FarmClosureManagement",params : {}}]},
+    {header : "Administration", content : [{item_name : "Feed Type" , item_route : "FeedTypes",params : {}},{item_name : "Energy Type" , item_route : "", params : {}},{item_name : "Cull Type" , item_route : "" , params : {}},{item_name : "Medication Name" , item_route : "" , params : {}}]},
+    {header : "Reports", content : [{item_name : "Daily Summary Report" , item_route : "" , params : {} },{item_name : "Sales Report" , item_route : "" , params : {} },{item_name : "Feed Consumption Report" , item_route : "" , params : {}},{item_name : "Technical Farm Closure Report" , item_route : "" , params : {}},{item_name : "Financial Farm Closure Report" , item_route : "",params : {}}]},
 ];
 
 var navigation = "" ;
@@ -85,7 +85,7 @@ class MainMenu extends PureComponent {
                             renderItem={({ item }) => {
                               return (
                                   <Animatable.View duration={400}>
-                                      <TouchableOpacity onPress={()=> navigation.navigate(item.item_route)} style={styles.customDrawerTouch} >
+                                      <TouchableOpacity onPress={()=> item.params.length !== 0 ? navigation.navigate(item.item_route , { id : item.params.ID , date : item.params.Date }) : navigation.navigate(item.item_route) } style={styles.customDrawerTouch} >
                                         <View style={styles.backButtonRow}>
                                         <Text style={{ color: '#000000' }}>  {item.item_name}   </Text>
                                         </View>
